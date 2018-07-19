@@ -46,7 +46,7 @@ function loginAction() {
   $(".login-button").click(function(e) {
     if (this.innerText === "Login"){
       let loginname = document.querySelector('#login-username').value
-      fetch('http://localhost:3009/api/v1/users')
+      fetch(API_ROOT)
       .then(resp => resp.json())
       .then(json => json.data.find(user => {
         return user.attributes.username === loginname
@@ -68,7 +68,7 @@ function loginAction() {
       let fullname = document.querySelector('#register-fullname').value
       let username = document.querySelector('#register-username').value
 
-      fetch('http://localhost:3009/api/v1/users',{
+      fetch(API_ROOT,{
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({name: fullname, username: username})

@@ -6,7 +6,7 @@ if ( hostname === 'halftime-metro-frontend.herokuapp.com' ) {
 } else if ( hostname === '127.0.0.1' ) {
   backendHost = 'http://localhost:3001'
 }
-
+ 
 const API_ROOT = backendHost
 
 // TODO
