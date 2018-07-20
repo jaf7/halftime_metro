@@ -109,7 +109,7 @@ a.navbar-item.is-active, a.navbar-item:hover, a.navbar-link.is-active, a.navbar-
 #form-columns {
   margin-top: auto;
   margin-bottom: 1rem;
-  margin-left: .8rem;
+  /* margin-left: .8rem; */
 }
 
 .img-wrapper {
@@ -150,9 +150,9 @@ a.navbar-item.is-active, a.navbar-item:hover, a.navbar-link.is-active, a.navbar-
   width: 100%;
 }
 
-.map-column {
+/* .map-column {
   margin-left: 1.5rem;
-}
+} */
 
 div#map.box {
   height: -webkit-fill-available;
