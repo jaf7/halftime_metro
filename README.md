@@ -30,7 +30,7 @@ npm install -g live-server
 ```
 and execute `live-server` while in the root directory. 
 
-To run the backend locally, see it's [repo](). 
+To run the backend locally, see it's [repo]() (when running locally the app will look for the API endpoint at `localhost:3001`)
 
 #### TODO
 
