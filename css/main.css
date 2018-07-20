@@ -56,26 +56,11 @@ a.navbar-item.is-active, a.navbar-item:hover, a.navbar-link.is-active, a.navbar-
   color: transparent; 
 }
 
-/* .header {
-  height: 38vh; 
-  background-image: linear-gradient( 
-      to right bottom, 
-      rgba($color-primary-light, 0.808), 
-      rgba($color-primary-dark, 0.801)), 
-      url(../img/hero.jpg);
-  background-size: cover; 
-  background-position: top;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative;
-} */
 .header-text-box {
     text-align: center;
 }
 .heading-primary {
-  /* color: rgba(111, 192, 138, 0.8); */
   color: rgba(84, 199, 124, 0.8);
-  
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-top: 3rem;
