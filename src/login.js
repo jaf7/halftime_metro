@@ -2,7 +2,7 @@ function loginAction() {
 
   //show login modal
   $(".login_trigger").click(function() {
-    if (this.text === "Click here to Login" || this.text === "Already have an account? Log in."){
+    if (this.text === "Login" || this.text === "Already have an account? Log in."){
       $(".modal").addClass("is-active")
       $(".user_login").show()
       $("#warn-username-required").removeAttr("style").hide()
@@ -13,14 +13,14 @@ function loginAction() {
     } else {
       console.log
       alert(`hello ${$(".login_trigger")[0].attributes[4].value}`)
-      //what to do when click Logged in as ___.
+      //what to do when click Hi ${[USERNAME]}!
     }
   })
 
   //show register modal
   $(".register_trigger").click(function() {
         console.log(this)
-    if (this.text === "or register" || this.text === "Don't have an account? Sign up!"){
+    if (this.text === "Register" || this.text === "Don't have an account? Sign up!"){
       $(".modal").addClass("is-active")
       $(".user_login").hide()
       $(".user_register").show()
@@ -98,15 +98,15 @@ function loginAction() {
     $("#login-form")[0].reset()
     $("#register-form")[0].reset()
     $(".modal").removeClass("is-active")
-    $(".login_trigger").text(`Logged in as ${username} (${fullname}) `)
+    $(".login_trigger").text(`Hi ${username}!`)
     $(".register_trigger").text("Log out?")
     $(".login_trigger").attr("user-id", `${userid}`)
     $(".login_trigger").attr("user-fullname", `${fullname}`)
   }
 
   function logout(){
-    $("#log-top-trg").text("Click here to Login")
-    $("#reg-top-trg").text("or register")
+    $("#log-top-trg").text("Login")
+    $("#reg-top-trg").text("Register")
     $("#reg-mod-trg").text("Don't have an account? Sign up!")
     $("#log-mod-trg").text("Already have an account? Log in.")
     $(".login_trigger").removeAttr("user-id")

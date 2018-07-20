@@ -30,7 +30,7 @@ let submitAddresses = (e) => {
   let bestDestination
 
   clearMarkers()
-  $(window).scrollTo(mapColumn, 600, {easing:"swing"})
+  $(window).scrollTo(mapColumn, 600, {easing:"swing", offset: 10})
 
   Promise.all([geoCodeAddress(address1, userName1), geoCodeAddress(address2, userName2)])
     .then((responses) => {

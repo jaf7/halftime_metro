@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HalfTime</title>
+    <title>HalfTime Metro | Find the best place to meet</title>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="src/api_key.js"></script>
     <script src="src/api_config.js"></script>
@@ -23,96 +24,124 @@
     <script src="src/get_directions.js"></script>
     <script src="src/fit_bounds_to_origins.js"></script>
     <script src="src/set_center.js"></script>
+
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+    <link rel="stylesheet" href="css/icon-font.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#">
-                <img src="src/No-logo.svg" alt="no logo yet" width="112" height="28">
-            </a>
-        </div>
-        <a id="log-top-trg" class="login_trigger navbar-item" href="#modal">Click here to Login</a>
-        <a id="reg-top-trg" class="register_trigger navbar-item" href="#modal">or register</a>
-        <div class="navbar-burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+    <div class="hero columns">
+        <nav class="navbar navbar-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <!-- <a class="navbar-item" href="#"> -->
+                <div>
+                        <a href="#"><i class="logo-icon icon-basic-clockwise"></i></a>
+                </div>
+                    <!-- <img src="src/No-logo.svg" alt="no logo yet" width="112" height="28"> -->
+                    
+                <!-- </a> -->
+            </div>
+            <a id="log-top-trg" class="user-button login_trigger navbar-item" href="#modal">Login</a>
+            <a id="reg-top-trg" class="user-button register_trigger navbar-item" href="#modal">Register</a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
 
-    <div class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">Login</p>
-                <button class="delete" id="login-close" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <div class="user_login">
-                    <form id="login-form">
-                        <div class="control">
-                            <label>Username</label>
-                            <input id="login-username" type="text" />
-                        </div>
-                        <p class="help is-danger" style="display: none" id="warn-username-invalid">This username is invalid</p>
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Login</p>
+                    <button class="delete" id="login-close" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="user_login">
+                        <form id="login-form">
+                            <div class="control">
+                                <label>Username</label>
+                                <input id="login-username" type="text" />
+                            </div>
+                            <p class="help is-danger" style="display: none" id="warn-username-invalid">This username is invalid</p>
+                            <br/>
+                        </form>
+                        <button class="login-button button is-success">Login</button>
                         <br/>
-                    </form>
-                    <button class="login-button button is-success">Login</button>
-                    <br/>
-                    <a href="#" id="reg-mod-trg" class="register_trigger">Don't have an account? Sign up!</a>
-                </div>
-                <div class="user_register">
-                    <form id="register-form">
-                        <div class="control">
-                            <label>Full Name</label>
-                            <input id="register-fullname" type="text" />
-                        </div>
-                        <p class="help is-danger" style="display: none" id="warn-name-required">Name is required</p>
-                        <div class="control">
-                            <label>Username</label>
-                            <input id="register-username" type="text" />
-                        </div>
-                        <p class="help is-danger" style="display: none" id="warn-username-required">Username is required</p>
-                        <p class="help is-danger" style="display: none" id="warn-username-taken">This username has been taken</p>
+                        <a href="#" id="reg-mod-trg" class="register_trigger">Don't have an account? Sign up!</a>
+                    </div>
+                    <div class="user_register">
+                        <form id="register-form">
+                            <div class="control">
+                                <label>Full Name</label>
+                                <input id="register-fullname" type="text" />
+                            </div>
+                            <p class="help is-danger" style="display: none" id="warn-name-required">Name is required</p>
+                            <div class="control">
+                                <label>Username</label>
+                                <input id="register-username" type="text" />
+                            </div>
+                            <p class="help is-danger" style="display: none" id="warn-username-required">Username is required</p>
+                            <p class="help is-danger" style="display: none" id="warn-username-taken">This username has been taken</p>
+                            <br/>
+                        </form>
+                        <button class="login-button button is-success">Register</button>
                         <br/>
+                        <a href="#" id="log-mod-trg" class="login_trigger">Already have an account? Log in.</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="header-text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary-main">Halftime Metro</span>
+                    <span class="heading-primary-sub">Spend more time with your friends</span>
+                </h1>
+                <!-- <a href="#" class="btn">Find your midpoint</a> -->
+            </div>
+        </header>
+
+        <div class="container is-fluid">
+            <div class="columns" id="form-columns">
+                <div class="column is-half">
+                    <form id="form-address-1">
+                        <input type="text" name="" class="input" id="user-name-1" placeholder="Name" size="50" style="height:50px;font-size:14pt;margin-bottom:.5rem;">
+                        </br>
+                        <input type="text" name="" class="input" id="input-address-1" placeholder="Enter a location" size="50" style="height:50px;font-size:14pt;">
+                        <!-- <input type="text" name="" id="input-keywords-1" placeholder="Enter keywords" width="48" height="24"> -->
                     </form>
-                    <button class="login-button button is-success">Register</button>
-                    <br/>
-                    <a href="#" id="log-mod-trg" class="login_trigger">Already have an account? Log in.</a>
                 </div>
-            </section>
+                <div class="column is-half">
+                    <form id="form-address-2">
+                        <input type="text" name="" class="input" id="user-name-2" placeholder="Name" size="50" style="height:50px;font-size:14pt;margin-bottom:.5rem;">
+                        </br>
+                        <input type="text" name="" class="input" id="input-address-2" placeholder="Enter a location, then hit Enter!" size="50" style="height:50px;font-size:14pt;">
+                        <!-- <input type="text" name="" id="input-keywords-2" placeholder="Enter keywords" width="48" height="24"> -->
+                    </form>
+                </div>
+                <!-- <div class="column is-2">
+                    <form id="form-submit-addresses">
+                        <input type="submit" name="" class="button is-success" id="submit-addresses" value="Add Addresses">
+                    </form>
+                </div> -->
+            </div>
+        </div>
+        <div class="bg-video">
+            <video class="bg-video-content" autoplay muted loop>
+                <source src="img/video.mp4" type="video/mp4" >
+                <source src="img/video.webm" type="video/webm" >
+                (Background video is not supported in this browser)
+            </video>
         </div>
     </div>
 
-    <div class="container is-fluid">
-        <div class="columns" id="form-columns">
-            <div class="column is-half">
-                <form id="form-address-1">
-                    <input type="text" name="" class="input" id="user-name-1" placeholder="Name" size="50" style="height:50px;font-size:14pt;margin-bottom:.5rem;">
-                    </br>
-                    <input type="text" name="" class="input" id="input-address-1" placeholder="Enter a location" size="50" style="height:50px;font-size:14pt;">
-                    <!-- <input type="text" name="" id="input-keywords-1" placeholder="Enter keywords" width="48" height="24"> -->
-                </form>
-            </div>
-            <div class="column is-half">
-                <form id="form-address-2">
-                    <input type="text" name="" class="input" id="user-name-2" placeholder="Name" size="50" style="height:50px;font-size:14pt;margin-bottom:.5rem;">
-                    </br>
-                    <input type="text" name="" class="input" id="input-address-2" placeholder="Enter a location, then hit Enter!" size="50" style="height:50px;font-size:14pt;">
-                    <!-- <input type="text" name="" id="input-keywords-2" placeholder="Enter keywords" width="48" height="24"> -->
-                </form>
-            </div>
-            <!-- <div class="column is-2">
-                <form id="form-submit-addresses">
-                    <input type="submit" name="" class="button is-success" id="submit-addresses" value="Add Addresses">
-                </form>
-            </div> -->
-        </div>
-
+    <div class="container is-fluid results">
         <div class="columns">
 
             <div class="column is-one-third img-wrapper">
@@ -127,6 +156,7 @@
                         </p>
                     </div>
                 </div>
+                <!-- <div id="output"></div> -->
                 <div class="box" id="map"></div>
             </div>
         </div>

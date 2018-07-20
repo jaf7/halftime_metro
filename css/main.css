@@ -1,35 +1,120 @@
-/* .bg {
-   position: fixed;
-   top: -50%;
-   left: -50%;
-   width: 200%;
-   height: 200%;
- }
- .bg img {
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   margin: auto;
-   min-width: 50%;
-   min-height: 50%;
- }*/
+/* #7ed56f rgb(126, 213, 111);
+#55c57a;   rgb(85, 197, 122);
+#28b485;   rgb(40, 180, 133);*/
 
-/*navbar {
-  position: fixed;
-  z-index: 1 !important;
-}*/
-
-/*.nav-fixed-top{
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1;
-}*/
+html {
+  // Define what 1rem is.
+  /* Results in a default computed value of 10px since 0.625 * 16px = 10px */
+  /* So we're computing relative to user agent specified value, not overriding with a hardcoded value */
+  font-size: 62.5%;
+}
 
 body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   scroll-behavior: smooth;
+}
+
+.navbar {
+  /* height: 80px; */
+  background-color: #28b485;
+  font-size: 1.2rem;
+}
+
+.navbar-item {
+  padding: .1rem .1rem;
+}
+
+.logo-icon {
+  font-size: 4rem;
+  margin-left: 2.5rem;
+  margin-top: 2rem;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgba(209, 235, 205, 0.8), rgb(131, 226, 163));
+  -webkit-background-clip: text;
+  color: transparent; 
+}
+
+.register_trigger, .login_trigger {
+  position: absolute;
+  float: right;
+  top: 35%;
+
+}
+
+.register_trigger {
+  right: 2rem;
+}
+
+.login_trigger {
+  right: 8rem;
+}
+
+a.navbar-item.is-active, a.navbar-item:hover, a.navbar-link.is-active, a.navbar-link:hover {
+  background-image: linear-gradient(to right, rgba(209, 235, 205, 0.8), rgb(131, 226, 163));
+  -webkit-background-clip: text;
+  color: transparent; 
+}
+
+/* .header {
+  height: 38vh; 
+  background-image: linear-gradient( 
+      to right bottom, 
+      rgba($color-primary-light, 0.808), 
+      rgba($color-primary-dark, 0.801)), 
+      url(../img/hero.jpg);
+  background-size: cover; 
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+} */
+.header-text-box {
+    text-align: center;
+}
+.heading-primary {
+  /* color: rgba(111, 192, 138, 0.8); */
+  color: rgba(84, 199, 124, 0.8);
+  
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.heading-primary-main {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 2rem;
+  margin-bottom: 2rem;
+  animation: moveInLeft 1s ease-out;
+}
+.heading-primary-sub {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: .9rem;
+  margin-bottom: 4rem;
+  animation: moveInRight 1s ease-out;
+}
+
+.hero {
+  position: relative;
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .3;
+  overflow: hidden;
+}
+.bg-video-content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .box {
@@ -38,11 +123,14 @@ body {
 
 #form-columns {
   margin-top: auto;
+  margin-bottom: 1rem;
+  margin-left: .8rem;
 }
 
 .img-wrapper {
   display: none;
   height: 100.5rem;
+  margin-left: 1.5rem;
   /* height: 100%; */
   overflow-y: scroll;
   /* overflow: auto;
@@ -77,6 +165,10 @@ body {
   width: 100%;
 }
 
+.map-column {
+  margin-left: 1.5rem;
+}
+
 div#map.box {
   height: -webkit-fill-available;
   height: fill-available;
@@ -89,4 +181,33 @@ div#map.box {
 
 .btn-wrapper {
   margin-top: 1rem;
+}
+
+/* ANIMATIONS */
+@keyframes moveInLeft { 
+  0% {
+      opacity: 0;
+      transform: translateX(-10rem);
+  }
+  80% {
+      transform: translateX(.5rem);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(10rem);
+  }
+  80% {
+      transform: translateX(-.5rem);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
 }
