@@ -15,7 +15,7 @@ This app was born because I couldn't find a service online that offered the best
 
 ## Built Using
 
-* [ES6 JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [ES6 JavaScript](http://es6-features.org/)
 * Custom CSS including `@keyframes` for animation sequences
 * [Bulma](https://bulma.io/)
 * [jQuery](https://jquery.com/)
