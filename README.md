@@ -11,7 +11,7 @@ The app also uses a minimal backend Rails API for user registration (hosted on H
 * Youtube [Demo](https://youtu.be/DK8PVKX0Dq8)
 
 ## Motivation
-This app was born because I couldn't find a service online that offered the best metro / walking route to a meeting place between two origins, based on optimum travel time. While distance is important, within the city (NYC in my case) travel time is most important when planning to meet up. It can be difficult and time consuming to figure out the best subway stops to get off at and the best walking destinations. I wanted a way to make a quick decision and spend more time with my friend and less figuring out where to meet.
+This app was born because I couldn't find a service online that offered the best metro / walking route to a meeting place between two origins, based on optimum travel time. While distance is important, within the city (NYC in my case) travel time is most important when planning to meet up. When you're on the go or short of time, it can be difficult and time consuming to figure out the best subway stops to get off at and the best walking destinations. I wanted a way to make a quick decision and spend more time with my friend and less figuring out where to meet.
 
 ## Built Using
 
