@@ -8,6 +8,7 @@ The app also uses a minimal backend Rails API for user registration (hosted on H
 
 ## Demo / How To
 ➡️  &nbsp; User it here[Github Pages](https://jaf7.github.io/halftime_metro/)! (Feedback welcome! @janthonyfields)
+
 ➡️  &nbsp; Watch a 2 minute demo [here](https://youtu.be/DK8PVKX0Dq8)
 
 ## Motivation
