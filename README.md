@@ -36,7 +36,8 @@ To run the backend locally, see it's [repo]() (when running locally the app will
 
 #### TODO
 
-  - [ ] Persist logged in users' routes to backend or `LocalStorage`
+  - [ ] Persist logged in users' saved routes to backend or `LocalStorage`
+  - [ ] Experiment w/ refactoring to use [Ruby Geocoder](https://github.com/alexreisner/geocoder)
 
 ## Credits
 Thanks to my pairing partner on this project, Caroline Lee!
