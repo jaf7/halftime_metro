@@ -37,6 +37,7 @@ To run the backend locally, see it's [repo]() (when running locally the app will
 #### TODO
 
   - [ ] Persist logged in users' saved routes to backend or `LocalStorage`
+  - [ ] Implement Facebook login using [OmniAuth](https://github.com/omniauth/omniauth)
   - [ ] Experiment w/ refactoring to use [Ruby Geocoder](https://github.com/alexreisner/geocoder)
 
 ## Credits
